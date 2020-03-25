@@ -16,4 +16,14 @@
         android:id="@+id/login"
         app:showAsAction="never"
         />
+    <item
+        android:title="Sign in"
+        android:id="@+id/signin"
+        app:showAsAction="never"
+        />
+    <item
+        android:title="Settings"
+        android:id="@+id/settings"
+        app:showAsAction="never"
+        />
 </menu>

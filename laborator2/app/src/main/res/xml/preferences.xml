@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="#ffffff"
+        android:entries="@array/colorName"
+        android:entryValues="@array/colorCode"
+        android:key="background_color"
+        android:summary="Set the background colour of app"
+        android:title="Background Colour" />
+
+    <ListPreference
+        android:defaultValue="#111111"
+        android:entries="@array/colorName"
+        android:entryValues="@array/colorCode"
+        android:key="text_colour"
+        android:summary="Set the text colour of app"
+        android:title="Text Colour" />
+    <ListPreference
+        android:defaultValue="RON"
+        android:entries="@array/currency"
+        android:entryValues="@array/currency"
+        android:key="currency"
+        android:summary="Set the currency in RON or in EURO"
+        android:title="Currency" />
+</PreferenceScreen>

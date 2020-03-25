@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
             android:name=".Contact"
             android:label="Contact"
             android:parentActivityName=".MainActivity">

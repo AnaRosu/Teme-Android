@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="colorName">
+        <item name="1">Black</item>
+        <item name="2">White</item>
+    </string-array>
+    <string-array name="colorCode">
+        <item name="1">#111111</item>
+        <item name="2">#ffffff</item>
+    </string-array>
+    <string-array name="currency">
+        <item name="1">"RON"</item>
+        <item name="2">"EURO"</item>
+    </string-array>
+</resources>
