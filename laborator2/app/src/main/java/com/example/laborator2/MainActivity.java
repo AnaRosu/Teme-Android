@@ -1,11 +1,12 @@
 package com.example.laborator2;
 
-import android.content.Context;
+import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.preference.PreferenceManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,11 +22,8 @@ import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 //ROSU ANA-MARIA, an 3, grupa B6
 
@@ -37,6 +35,10 @@ import org.w3c.dom.Text;
 //lab5:
 //1.implementare settings activity ce foloseste shared preferences pentru schimbarea culorii backgroundului si textului si pentru schimbarea monezii de afisare a preturilor
 //2.implementarea unei baze de date sqllite pe baza careia utilizatorul de poate loga (verificare username+parola in baza de date) + functionalitatea de sign in (cu validarile aferente)
+
+//lab6:
+//1.SensorsActivity ce listeaza sensorii existenti
+//2.Location ce foloseste LocListener pentru a afisa coordonatele curente
 
 
 
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+
 
         Log.d(TAG,"onCreate");
         setContentView(R.layout.activity_main);
@@ -107,8 +110,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(this, Contact.class);
                 this.startActivity(intent1);
                 return true;
-            case R.id.home:
-                Intent intent2 = new Intent(this,Home.class);
+            case R.id.location:
+                Intent intent2 = new Intent(this, Location.class);
                 this.startActivity(intent2);
                 return true;
             case R.id.login:
@@ -121,6 +124,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.settings:
                 Intent intent3 = new Intent(this, SettingsActivity.class);
                 this.startActivity(intent3);
+                return true;
+            case R.id.sensors:
+                Intent intent4 = new Intent(this, SensorsActivity.class);
+                this.startActivity(intent4);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
